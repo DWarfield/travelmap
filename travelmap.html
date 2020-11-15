@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW, NOIMAGEINDEX" />	
+
+<!-- https://www.10bestdesign.com/jqvmap/ -->
+
+    <title>Warf's World 2.0 - World Map</title>
+    
+    <link rel="stylesheet" href="../dist/jquery-jvectormap-2.0.5.css" type="text/css" media="screen"/>
+
+    <script src="../dist/jquery-3.5.1.min.js"></script>
+    <script src="../dist/jquery-jvectormap-2.0.5.min.js"></script>
+ 	<script src="../dist/maps/jquery-jvectormap-world-mill.js"></script> 
+    <script src="../dist/jquery-mousewheel.js"></script> 
+    
+<!--    <link href="../dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css"> -->
+<!--    <script type="text/javascript" src="../dist/jquery.vmap.js"></script> -->
+
+ 
+
+<link rel="SHORTCUT ICON" href="../favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/layout.css" />
+<style type="text/css">
+<!--
+.style1 {font-size: larger}
+-->
+</style>
+</head>
+
+  <body>   
+<div id="container"><!-- Outer Box -->
+	
+		<div id="banner">
+				  <a href="../index.html"><img src="../images/blank_banner_med.gif" border="0" /></a></div>
+		    
+		<div id="menu-bar">
+              <img src="images/blank.gif" width="100" height="1" />
+
+ 			&nbsp;<a href="travel.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('travellist','','../images/travel/travellist_logo.gif',1)"><img src="../images/travel/travellist_logo_fade.gif" name="travellist"  border="0" id="travellist" /></a>
+              <img src="images/blank.gif" width="25" height="1" />
+            
+              &nbsp;<a href="travelmap.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('travelmap','','../images/travel/travelmap_logo.gif',1)"><img src="../images/travel/travelmap_logo_fade.gif" name="travelmap"  border="0" id="travelmap" /></a>	
+        </div>
+        
+        <div id="sub-menu" >
+			<h6>
+              
+              <!--<img src="../images/blank.gif" width="10" height="10" border="0"  /><a href="travel.html">Travel Diaries</a>             
+              <img src="../images/blank.gif" width="10" height="10" border="0"  /> Travel Map
+              <img src="../images/blank.gif" width="10" height="10" border="0"  /><a href="travel/travel_map.html">Map</a>-->
+              <!--<img src="../images/blank.gif" width="10" height="10" border="0"  /><a href="travel/travel_hotlist.html">Hotlist</a> -->
+			  <img src="../images/blank.gif" width="10" height="10" border="0"  /><a href="travel/travel_links.html">Travel Links</a>            </h6>  
+  </div>
+
+      
+
+<div id="content">
+             
+    <div align="center"><img src="../images/blank.gif" width="100" height="15" /><br />
+  <img src="../images/worldtravel_map_title.gif" /><br />
+  <img src="../images/blank.gif" width="100" height="25" /><br />
+  <!-- Original images were 158x60... downsized to 119x45, a 75% reduction -->
+      
+      
+      
+      
+    </div>
+    
+<!-- THIS IS THE JQUERY VECTOR MAP									-->
+
+    <div id="vmap" align="center" style="width: 800px; height: 500px; margin:0px auto; position: relative" ></div>
+
+	<script>
+    $(function(){
+      $('#vmap').vectorMap({
+		map: 'world_mill',
+		backgroundColor: '#8DB9EF',
+
+// Click on region, go to webpage
+		onRegionClick: function(event, code){
+			if (code == "tz") {window.location = 'travel/tanzania1.html'}
+			if (code == "au") {window.location = 'travel/australia1.html'}
+			if (code == "nz") {window.location = 'travel/newzealand1.html'}
+			if (code == "fj") {window.location = 'travel/australia.html'}
+			if (code == "cn") {window.location = 'travel/china.html'}
+			if (code == "jp") {window.location = 'travel/japan1.html'}
+			if (code == "ru") {window.location = 'travel/Moscow.html'}
+			if (code == "es") {window.location = 'travel/spaingreece1.html#spain'}
+			if (code == "pf") {window.location = 'travel/polynesia.html'}
+			if (code == "lc") {window.location = 'travel/stlucia.html'}
+			if (code == "bb") {window.location = 'travel/barbados.html'}
+			if (code == "bs") {window.location = 'travel/panama.html'}
+			if (code == "do") {window.location = 'travel/dominican.html'}
+			if (code == "cu") {window.location = 'travel/cuba.html'}
+			if (code == "jm") {window.location = 'travel/caribbean.html#jamaica'}
+			if (code == "gt") {window.location = 'travel/belize.html#guatemala'}
+			if (code == "cr") {window.location = 'travel/panama6.html'}
+			if (code == "pa") {window.location = 'travel/panama5.html'}
+			if (code == "co") {window.location = 'travel/panama4.html'}
+			if (code == "bz") {window.location = 'travel/belize.html'}
+			if (code == "no") {window.location = 'travel/Norway1.html'}
+			if (code == "se") {window.location = 'travel/europe.html#sweden'}
+			if (code == "fi") {window.location = 'travel/europe.html#finland'}
+			if (code == "dk") {window.location = 'travel/europe.html'}
+			if (code == "gb") {window.location = 'travel/british_isles.html'}
+			if (code == "it") {window.location = 'travel/europe4.html'}
+			if (code == "fr") {window.location = 'travel/europe5.html'}
+			if (code == "nl") {window.location = 'travel/europe1.html'}
+			if (code == "ie") {window.location = 'travel/british_isles4a.html'}
+			if (code == "nd") {window.location = 'travel/british_isles4d.html'}
+			if (code == "be") {window.location = 'travel/europe1.html#belgium'}
+			if (code == "de") {window.location = 'travel/europe2.html'}
+			if (code == "ch") {window.location = 'travel/europe3.html'}
+			if (code == "cz") {window.location = 'travel/eastern_europe2.html'}
+			if (code == "sk") {window.location = 'travel/eastern_europe3.html'}
+			if (code == "ma") {window.location = 'travel/spaingreece1.html#spain'}
+//add shortcut to Morocco section			
+
+// will need launch page
+			if (code == "at") {window.location = 'travel/eastern_europe1.html'}
+			if (code == "hu") {window.location = 'travel/eastern_europe3.html#budapest'}
+			if (code == "si") {window.location = 'travel/eastern_europe5.html'}
+			if (code == "hr") {window.location = 'travel/eastern_europe4b.html'}
+			if (code == "gr") {window.location = 'travel/spaingreece2.html'}
+			if (code == "sg") {window.location = 'travel/stvincent.html'}
+			if (code == "tc") {window.location = 'travel/grandturk.html'}
+			if (code == "gc") {window.location = 'travel/caribbean.html#cayman'}
+			if (code == "sm") {window.location = 'travel/stmartin.html'}
+			if (code == "aa") {window.location = 'travel/panama2.html'}
+			if (code == "cc") {window.location = 'travel/panama3.html'}
+			if (code == "ck") {window.location = 'travel/australia4.html'}
+
+// launch page
+			if (code == "mx") {window.location = 'travel/list_mexico.html'}
+// launch page
+			if (code == "ca") {window.location = 'travel/list_canada.html'}
+// launch page
+			if (code == "us") {window.location = 'travel/list_usa.html'}
+// launch page
+			if (code == "ak") {window.location = 'travel/list_alaska.html'}
+// launch page
+			if (code == "hw") {window.location = 'travel/list_hawaii.html'}
+		},
+
+		regionStyle: {
+			initial: {
+				fill: '#FFFFFF',
+			}
+		},
+//colour code for visited countries
+		series: {
+			regions: [{
+				values: {
+			aa: '#1F4A94',
+            ak: '#1F4A94',
+			at: '#1F4A94',
+			au: '#1F4A94',
+			bb: '#1F4A94',
+			be: '#1F4A94',
+			bs: '#1F4A94',
+			bz: '#1F4A94',
+			ca: '#1F4A94',
+			cc: '#1F4A94',
+			cn: '#1F4A94',
+			ch: '#1F4A94',
+			ck: '#1F4A94',
+			co: '#1F4A94',
+			cr: '#1F4A94',
+			cu: '#1F4A94',
+			cz: '#1F4A94',
+			de: '#1F4A94',
+			dk: '#1F4A94',
+			do: '#1F4A94',
+			es: '#1F4A94',
+			fi: '#1F4A94',
+			fj: '#1F4A94',
+			fr: '#1F4A94',
+			gb: '#1F4A94',
+			gc: '#1F4A94',
+			gr: '#1F4A94',
+			gt: '#1F4A94',
+			hr: '#1F4A94',
+			hu: '#1F4A94',
+			hw: '#1F4A94',
+			ie: '#1F4A94',
+			it: '#1F4A94',
+			jm: '#1F4A94',
+			jp: '#1F4A94',
+			lc: '#1F4A94',
+            ma: '#1F4A94',
+			mx: '#1F4A94',
+			nd: '#1F4A94',
+			nl: '#1F4A94',
+			no: '#1F4A94',
+			nz: '#1F4A94',
+			pa: '#1F4A94',
+			pf: '#1F4A94',
+			ru: '#1F4A94',
+			se: '#1F4A94',
+            tz: '#1F4A94',
+			sk: '#1F4A94',
+			si: '#1F4A94',
+			sg: '#1F4A94',
+			tc: '#1F4A94',
+			sm: '#1F4A94',
+            us: '#1F4A94'
+
+				}
+			}]
+		}
+		
+
+		
+			
+			
+		  });
+	});
+	</script>	
+	
+
+ 
+ 
+
+            
+    <div ><img src="../images/blank.gif" width="100" height="29" /></div>
+</div>
+      
+		<div id="bottom-menu">
+        <img src="../images/blank.gif" width="100" height="10" /><br />
+		Where in the world have we been?  <strong>
+        <!--<a href="travel/travel_map.html">Where in the world have we been?</a></strong>-->
+
+		</div>
+
+		<div id="footer">
+			Copyright &copy; 2020 Warf's World | <a href="about.html">About Warf</a> | Last Updated November 12, 2020
+		</div>
+
+
+  </div>
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+</body>
+</html>
